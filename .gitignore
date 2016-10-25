@@ -17,8 +17,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 *.xcscmblueprint
-
-# Carthage
+*.resolved
 Carthage/Build
 Carthage/Checkouts
 

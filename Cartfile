@@ -1,1 +1,1 @@
-github "typelift/Swiftz"
+github "typelift/Swiftz" ~> 0.5.1
