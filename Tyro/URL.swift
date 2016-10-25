@@ -24,7 +24,11 @@ public struct URLJSONConverter : FromJSON, ToJSON {
     }
     
     public static func toJSON(url : NSURL) -> Either<JSONError, JSONValue> {
-        return .Right(.String(url.absoluteString))
+        
+        let result = url.absoluteString.toEither(JSONError.Custom("No url"))
+        
+        return result.fmap { .String($0) }
+
     }
 }
 
