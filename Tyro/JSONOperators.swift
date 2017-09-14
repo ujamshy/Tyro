@@ -72,7 +72,7 @@ public func <! <A : FromJSON>(lhs : JSONValue?, rhs : JSONKeypath) throws -> A w
         return result
     }
     else {
-        throw JSONError.Custom("Could not find value at keypath \(rhs) in JSONValue : \(lhs)")
+        throw JSONError.Custom("Could not find value at keypath \(rhs) in JSONValue : \(String(describing: lhs))")
     }
 }
 
@@ -81,7 +81,7 @@ public func <! <A : FromJSON>(lhs : JSONValue?, rhs : JSONKeypath) throws -> [A]
         return result
     }
     else {
-        throw JSONError.Custom("Could not find value at keypath \(rhs) in JSONValue : \(lhs)")
+        throw JSONError.Custom("Could not find value at keypath \(rhs) in JSONValue : \(String(describing: lhs))")
     }
 }
 
@@ -90,6 +90,6 @@ public func <! <A : FromJSON>(lhs : JSONValue?, rhs : JSONKeypath) throws -> [St
         return result
     }
     else {
-        throw JSONError.Custom("Could not find value at keypath \(rhs) in JSONValue : \(lhs)")
+        throw JSONError.Custom("Could not find value at keypath \(rhs) in JSONValue : \(String(describing: lhs))")
     }
 }

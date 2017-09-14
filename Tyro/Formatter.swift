@@ -13,7 +13,7 @@ public protocol JSONValueConvertible : JSONDecoderType {
     var jsonValue : JSONValue? { get }
 }
 
-public protocol JSONFormatterType : JSONDecoderType, JSONEncoderType, JSONValueConvertible {
+public protocol JSONFormatterType : JSONEncoderType, JSONValueConvertible {
     associatedtype T
     associatedtype EncodedType = T
     associatedtype DecodedType = T
